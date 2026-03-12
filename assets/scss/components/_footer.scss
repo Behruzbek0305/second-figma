@@ -1,0 +1,128 @@
+.footer {
+    padding: 60px 0 60px 0;
+  &__wrap {
+    @include d-flex(row, unset, unset, 80);
+
+    @include media (1024) {
+        gap: 64px;
+    }
+
+    @include media (900) {
+        @include d-flex(column, unset, unset, 30);
+    }
+  }
+
+  &__title-logo {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: $main-color;
+    margin-bottom: 24px;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  &__subtitle {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 154%;
+    color: #4f4f4f;
+  }
+
+  &__links {
+    @include d-flex (row, unset ,unset, 80);
+
+    @include media (1024) {
+        gap: 64px;
+    }
+    @include media (900) {
+        justify-content: space-between;
+    }
+    @include media (600) {
+        gap: 40px;
+    }
+    @include media (450) {
+        flex-direction: column;
+        width: 100%;
+    }
+  }
+
+  &__link {
+    @include d-flex(column, unset, unset, 20);
+    @include media (450) {
+        width: 100%;
+    }
+  }
+
+  &__link-title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    color: #000;
+  }
+
+  &__link-subtitle {
+    @include d-flex(column, unset, unset, 14);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 114%;
+    color: #000;
+  }
+
+  &__input {
+    @include d-flex(column, unset, unset, 14);
+  }
+
+  &__input-title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    color: #000;
+  }
+
+  &__input-item {
+    border: 1px solid #f2f2f2;
+    border-radius: 2px;
+    max-width: 234px;
+    height: 32px;
+
+    &::placeholder {
+      padding-left: 16px;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 133%;
+      color: #000;
+      opacity: 0.5;
+    }
+  }
+
+  &__button {
+    @include d-flex (row, center, center, 0);
+    border-radius: 2px;
+    padding: 4px 12px;
+    width: 51px;
+    height: 22px;
+    backdrop-filter: blur(10px);
+    background: $main-color;
+    font-family: var(--font4);
+    font-weight: 500;
+    font-size: 8px;
+    line-height: 175%;
+    text-transform: capitalize;
+    color: #fff;
+    border: 1px solid $main-color;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+        background-color: transparent;
+        color: $main-color;
+    }
+  }
+}

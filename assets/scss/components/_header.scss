@@ -1,0 +1,46 @@
+.header {
+  margin-top: 40px;
+  &__wrap {
+    @include d-flex(row, center, space-between, 0);
+  }
+
+  &__buttons {
+    @include d-flex(row, center, unset, 20);
+  }
+
+  &__button {
+    padding: 8px 20px;
+    width: 111px;
+    height: 36px;
+    background-color: $main-color;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 143%;
+    text-align: center;
+    color: #fff;
+    transition: all .3s ease-in-out;
+    border: 1px solid $main-color;
+
+    &:hover {
+        background-color: transparent;
+        color:$main-color;
+    }
+
+
+    @include media (600) {
+        display: none;
+    }
+  }
+
+  &__menu {
+    display: none;
+
+    @include media (600) {
+        display: block;
+    }
+  }
+
+  &__icons {
+    @include d-flex(row, center, unset, 40);
+  }
+}

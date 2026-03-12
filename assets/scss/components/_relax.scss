@@ -1,0 +1,67 @@
+.relax {
+  margin: 80px 0 80px 0;
+  &__wrap {
+    @include d-flex(row, unset, unset, 84);
+    width: 100%;
+
+    @include media (1000) {
+        gap: 40px;
+    }
+
+    @include media (900) {
+        flex-direction: column;
+    }
+  }
+
+  &__left {
+    @include d-flex(column, unset, unset, 60);
+    width: 50%;
+
+    img {
+        width: 100%;
+    }
+
+    @include media (1150) {
+        gap: 36px;
+    }
+
+    @include media (900) {
+        width: 100%;
+    }
+  }
+
+  &__right {
+    width: 50%;
+    img {
+        width: 100%;
+    }
+
+    @include media (900) {
+        width: 100%;
+    }
+    
+  }
+
+  &__content {
+    @include d-flex(column, unset, unset, 16);
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 140%;
+    color: #2c1500;
+
+    @include media (1100) {
+        font-size: 32px;
+    }
+  }
+
+  &__subtitle {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 175%;
+    color: #2c1500;
+    opacity: 0.8;
+  }
+}

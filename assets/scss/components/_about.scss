@@ -1,0 +1,49 @@
+.about {
+    margin: 80px 0 80px 0;
+  &__cards {
+    @include d-flex(row, center, unset, 32);
+    width: 100%;
+
+    @include media (1080) {
+        gap: 28px;
+        flex-wrap: wrap;
+    }
+  }
+
+  &__card {
+    @include d-flex (column, unset, unset, 16);
+    border: 1px solid #e0e0e0;
+    width: 25%;
+    height: 155px;
+    padding: 16px;
+
+    @include media (1080) {
+        width: calc(33% - 16px);
+    }
+    @include media (860) {
+        width: calc(50% - 16px);
+    }
+
+    @include media (500) {
+        width: 100%;
+    }
+  }
+
+  &__title {
+    @include d-flex(row, center, unset, 16);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    color: $main-color;
+
+    @include media (550) {
+        font-size: 13px;
+    }
+  }
+  &__subtitle {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 160%;
+    color: #2c1500;
+  }
+}

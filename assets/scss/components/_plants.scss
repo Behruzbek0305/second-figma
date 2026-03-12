@@ -1,0 +1,77 @@
+.plants {
+    margin: 80px 0 80px 0;
+  &__wrap {
+    @include d-flex(column, unset, unset, 24);
+    width: 100%;
+  }
+
+  &__title {
+    @include d-flex(row, center, space-between, 0);
+    font-weight: 500;
+    font-size: 20px;
+    color: #000;
+  }
+
+  &__button {
+    @include d-flex(row, center, unset, 8);
+    border: 1px solid #e0e0e0;
+    padding: 8px 12px;
+    width: 130px;
+    height: 31px;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: #000;
+      color: #fff;
+    }
+  }
+
+  &__button svg path {
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__button:hover svg path {
+    stroke: #fff;
+  }
+
+  &__cards {
+    @include d-flex(row, center, unset, 24);
+
+    @include media (1024) {
+        flex-wrap: wrap;
+    }
+  }
+
+  &__card {
+    width: 20%;
+
+    img {
+        width: 100%;
+    }
+
+    @include media (1024) {
+        width: calc(25% - 18px);
+    }
+    @include media (900) {
+        width: calc(33% - 14px);
+    }
+    @include media (660) {
+        width: calc(50% - 14px);
+    }
+  }
+
+  &__card-content {
+    text-align: center;
+  }
+
+  &__name {
+    font-weight: 400;
+    font-size: 16px;
+    color: #000;
+  }
+  &__price {
+    font-weight: 600;
+    font-size: 16px;
+    color: #000;
+  }
+}
